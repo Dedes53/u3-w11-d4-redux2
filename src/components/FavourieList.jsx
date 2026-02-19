@@ -3,6 +3,7 @@ import { Col, Container } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { removeFronFavouritesAction } from '../redux/actions';
 
 function FavouriteList() {
 
@@ -29,10 +30,7 @@ function FavouriteList() {
                             <Col xs={3}>
                                 <Button
                                     onClick={() => {
-                                        dispatch({
-                                            type: "REMOVE_FROM_FAVOURITES",
-                                            payload: companies
-                                        })
+                                        dispatch(removeFronFavouritesAction({ company_name: companies }))
                                     }}
                                 >Rimuovi dai preferiti
                                 </Button>

@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { addToFavovouritesAction } from '../redux/actions'
 
 
 const Job = ({ data }) => {
@@ -25,10 +26,7 @@ const Job = ({ data }) => {
         <Button
           onClick={() => {
             if (!favourites.includes(data.company_name))
-              dispatch({
-                type: "ADD_TO_FAVOURITES",
-                payload: data.company_name
-              })
+              dispatch(addToFavovouritesAction(data))
           }}>Add to Favourites</Button>
       </Col>
     </Row>
