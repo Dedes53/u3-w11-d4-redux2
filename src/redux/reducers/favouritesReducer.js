@@ -1,3 +1,6 @@
+import { ADD_TO_FAVOURITES, REMOVE_FROM_FAVOURITES } from '../actions';
+
+
 const initialState = {
     favourites: {
         companies: [],
@@ -10,7 +13,7 @@ const mainReducer = (currState = initialState, action) => {
 
     switch (action.type) {
 
-        case "ADD_TO_FAVOURITES":
+        case ADD_TO_FAVOURITES:
             // console.log('aggiungo ai preferiti:', action.payload)
             return {
                 ...currState,
@@ -19,7 +22,7 @@ const mainReducer = (currState = initialState, action) => {
                 }
             }
 
-        case "REMOVE_FROM_FAVOURITES":
+        case REMOVE_FROM_FAVOURITES:
             return {
                 ...currState,
                 favourites: {
