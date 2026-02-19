@@ -1,10 +1,7 @@
 const initialState = {
-    favourites: {
-        companies: [],
-    },
-    search: {
-        results: [],
-    }
+
+    results: [],
+
 }
 
 const mainReducer = (currState = initialState, action) => {

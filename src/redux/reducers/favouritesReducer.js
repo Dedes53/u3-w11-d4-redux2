@@ -2,9 +2,9 @@ import { ADD_TO_FAVOURITES, REMOVE_FROM_FAVOURITES } from '../actions';
 
 
 const initialState = {
-    favourites: {
-        companies: [],
-    },
+
+    companies: [],
+
 }
 
 const mainReducer = (currState = initialState, action) => {
