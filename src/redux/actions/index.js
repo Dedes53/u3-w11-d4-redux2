@@ -34,7 +34,7 @@ export const fetchJobAction = (query) => {
             type: FETCH_JOBS_REQUEST
         })
 
-        fetch(`https://strive-benchmark.herokuapp.com/api/jobs?search=${query}`)
+        fetch(`https://strive-benchmark.herokuapp.com/api/jobs?search=${query}&limit=20`)
             .then((res) => {
                 if (res.ok) {
                     return res.json()

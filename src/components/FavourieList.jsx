@@ -29,6 +29,7 @@ function FavouriteList() {
                             <Col xs={3} style={{ fontSize: '2rem' }}>{companies}</Col>
                             <Col xs={3}>
                                 <Button
+                                    variant="danger"
                                     onClick={() => {
                                         dispatch(removeFromFavouritesAction({ company_name: companies }))
                                     }}

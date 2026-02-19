@@ -17,17 +17,13 @@ const mainReducer = (currState = initialState, action) => {
             // console.log('aggiungo ai preferiti:', action.payload)
             return {
                 ...currState,
-                favourites: {
-                    companies: [...currState.favourites.companies, action.payload]
-                }
+                companies: [...currState.companies, action.payload]
             }
 
         case REMOVE_FROM_FAVOURITES:
             return {
                 ...currState,
-                favourites: {
-                    companies: currState.favourites.companies.filter(company => company !== action.payload)
-                }
+                companies: currState.companies.filter(company => company !== action.payload)
             }
 
         default:

@@ -10,7 +10,7 @@ const MainSearch = () => {
   const [query, setQuery] = useState("")
 
   const dispatch = useDispatch()
-  const favourites = useSelector((state) => state.favourites.comapanies)
+  const favourites = useSelector((state) => state.favourites.companies)
 
   const { results, loading, error } = useSelector((state) => state.search)
 
